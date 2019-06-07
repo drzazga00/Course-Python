@@ -1,0 +1,4 @@
+
+* jest okej
+* tak dalej
+* nie
