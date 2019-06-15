@@ -6,21 +6,25 @@
 def wzrostt():
     wzrost = float(input('Wzrost w m'))
     return wzrost
-wz = wzrostt()
-print(wz)
+
 
 def wagaa():
     waga = int(input('Waga w kg'))
     return waga
 
-wg = wagaa()
+def main():
+    wg = wagaa()
+    wz = wzrostt()
+    BMI = (wg/wz**2)
+    print('Twoje BMI wynosi:',round(BMI,2))
 
-BMI = (wg/wz**2)
-print('Twoje BMI wynosi:',round(BMI,2))
+    if BMI < 18.5:
+        print('NIEDOWAGA')
+    if 18.5 < BMI < 25:
+        print('WARTOSC PRAWIDLOWA')
+    if BMI >25:
+        print('NADWAGA')
 
-if BMI < 18.5:
-    print('NIEDOWAGA')
-if 18.5 < BMI < 25:
-    print('WARTOSC PRAWIDLOWA')
-if BMI >25:
-    print('NADWAGA')
+
+if __name__ == "__main__":
+    main()
